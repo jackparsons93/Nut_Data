@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <p id="notice"><%= notice %></p>
-<%= form_tag import_datum_path, multipart: true do %>  
+<%= form_tag import_data_path, multipart: true do %>  
    <%= file_field_tag :file %>  
    <%= submit_tag "Import" %>  
 <% end %> 
