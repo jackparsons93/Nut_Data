@@ -1,7 +1,7 @@
 class CreateNutData < ActiveRecord::Migration[5.0]
   def change
     create_table :nut_data do |t|
-      t.string :ndb_do
+      t.string :ndb_no
       t.string :nutr_no
       t.decimal :nutr_val, precision: 10, scale: 3
       t.integer :num_data_pts

@@ -1,0 +1,17 @@
+#Controller
+def import  
+  Product.import(params[:file])  
+end
+
+#model
+def self.import(file)  
+  SmarterCSV.process(file.path) do |row|  
+   Product.create! row 
+  end  
+end 
+
+#show
+<%= form_tag import_products_path, multipart: true do %>  
+   <%= file_field_tag :file %>  
+   <%= submit_tag "Import" %>  
+<% end %> 

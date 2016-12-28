@@ -4,7 +4,7 @@ class DataController < ApplicationController
   # GET /data
   # GET /data.json
   def import  
-    Data.import(params[:file])  
+    Datum.import(params[:file])  
   end
 
   def index

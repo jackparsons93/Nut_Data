@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161228043636) do
+ActiveRecord::Schema.define(version: 20161228072328) do
 
   create_table "data", force: :cascade do |t|
     t.string   "ndb_do"
@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 20161228043636) do
     t.integer  "stat_cmt"
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
+    t.string   "addmod_date"
+    t.decimal  "up_eb"
   end
 
   create_table "nut_data", force: :cascade do |t|
