@@ -1,0 +1,2 @@
+json.extract! datum, :id, :ndb_do, :nutr_no, :nutr_val, :num_data_pts, :std_error, :src_cd, :deriv_cd, :ref_ndb_no, :add_nutr_mark, :num_studies, :min, :max, :df, :low_eb, :stat_cmt, :created_at, :updated_at
+json.url datum_url(datum, format: :json)

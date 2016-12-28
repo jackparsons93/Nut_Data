@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+<%= form_tag import_nut_data_path, multipart: true do %>  
+   <%= file_field_tag :file %>  
+   <%= submit_tag "Import" %>  
+<% end %> 
+
+<h1>Nut Data</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ndb do</th>
+      <th>Nutr no</th>
+      <th>Nutr val</th>
+      <th>Num data pts</th>
+      <th>Std error</th>
+      <th>Src cd</th>
+      <th>Deriv cd</th>
+      <th>Ref ndb no</th>
+      <th>Add nutr mark</th>
+      <th>Num studies</th>
+      <th>Min</th>
+      <th>Max</th>
+      <th>Df</th>
+      <th>Low eb</th>
+      <th>Stat cmt</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nut_data.each do |nut_datum| %>
+      <tr>
+        <td><%= nut_datum.ndb_do %></td>
+        <td><%= nut_datum.nutr_no %></td>
+        <td><%= nut_datum.nutr_val %></td>
+        <td><%= nut_datum.num_data_pts %></td>
+        <td><%= nut_datum.std_error %></td>
+        <td><%= nut_datum.src_cd %></td>
+        <td><%= nut_datum.deriv_cd %></td>
+        <td><%= nut_datum.ref_ndb_no %></td>
+        <td><%= nut_datum.add_nutr_mark %></td>
+        <td><%= nut_datum.num_studies %></td>
+        <td><%= nut_datum.min %></td>
+        <td><%= nut_datum.max %></td>
+        <td><%= nut_datum.df %></td>
+        <td><%= nut_datum.low_eb %></td>
+        <td><%= nut_datum.stat_cmt %></td>
+        <td><%= link_to 'Show', nut_datum %></td>
+        <td><%= link_to 'Edit', edit_nut_datum_path(nut_datum) %></td>
+        <td><%= link_to 'Destroy', nut_datum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Nut Datum', new_nut_datum_path %>

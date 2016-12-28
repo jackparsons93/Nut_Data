@@ -1,0 +1,1 @@
+json.partial! "nut_data/nut_datum", nut_datum: @nut_datum

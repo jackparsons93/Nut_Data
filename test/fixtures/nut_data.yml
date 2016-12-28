@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ndb_do: MyString
+  nutr_no: MyString
+  nutr_val: 9.99
+  num_data_pts: 1
+  std_error: 9.99
+  src_cd: MyString
+  deriv_cd: MyString
+  ref_ndb_no: MyString
+  add_nutr_mark: MyString
+  num_studies: 1
+  min: 9.99
+  max: 9.99
+  df: 1
+  low_eb: 9.99
+  stat_cmt: 1
+
+two:
+  ndb_do: MyString
+  nutr_no: MyString
+  nutr_val: 9.99
+  num_data_pts: 1
+  std_error: 9.99
+  src_cd: MyString
+  deriv_cd: MyString
+  ref_ndb_no: MyString
+  add_nutr_mark: MyString
+  num_studies: 1
+  min: 9.99
+  max: 9.99
+  df: 1
+  low_eb: 9.99
+  stat_cmt: 1

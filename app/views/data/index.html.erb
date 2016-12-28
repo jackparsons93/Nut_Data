@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></p>
+<%= form_tag import_datum_path, multipart: true do %>  
+   <%= file_field_tag :file %>  
+   <%= submit_tag "Import" %>  
+<% end %> 
+
+<h1>Data</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ndb do</th>
+      <th>Nutr no</th>
+      <th>Nutr val</th>
+      <th>Num data pts</th>
+      <th>Std error</th>
+      <th>Src cd</th>
+      <th>Deriv cd</th>
+      <th>Ref ndb no</th>
+      <th>Add nutr mark</th>
+      <th>Num studies</th>
+      <th>Min</th>
+      <th>Max</th>
+      <th>Df</th>
+      <th>Low eb</th>
+      <th>Stat cmt</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @data.each do |datum| %>
+      <tr>
+        <td><%= datum.ndb_do %></td>
+        <td><%= datum.nutr_no %></td>
+        <td><%= datum.nutr_val %></td>
+        <td><%= datum.num_data_pts %></td>
+        <td><%= datum.std_error %></td>
+        <td><%= datum.src_cd %></td>
+        <td><%= datum.deriv_cd %></td>
+        <td><%= datum.ref_ndb_no %></td>
+        <td><%= datum.add_nutr_mark %></td>
+        <td><%= datum.num_studies %></td>
+        <td><%= datum.min %></td>
+        <td><%= datum.max %></td>
+        <td><%= datum.df %></td>
+        <td><%= datum.low_eb %></td>
+        <td><%= datum.stat_cmt %></td>
+        <td><%= link_to 'Show', datum %></td>
+        <td><%= link_to 'Edit', edit_datum_path(datum) %></td>
+        <td><%= link_to 'Destroy', datum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Datum', new_datum_path %>

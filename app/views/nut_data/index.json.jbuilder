@@ -1,0 +1,1 @@
+json.array! @nut_data, partial: 'nut_data/nut_datum', as: :nut_datum

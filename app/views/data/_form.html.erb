@@ -1,0 +1,92 @@
+<%= form_for(datum) do |f| %>
+  <% if datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(datum.errors.count, "error") %> prohibited this datum from being saved:</h2>
+
+      <ul>
+      <% datum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ndb_do %>
+    <%= f.text_field :ndb_do %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nutr_no %>
+    <%= f.text_field :nutr_no %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nutr_val %>
+    <%= f.text_field :nutr_val %>
+  </div>
+
+  <div class="field">
+    <%= f.label :num_data_pts %>
+    <%= f.number_field :num_data_pts %>
+  </div>
+
+  <div class="field">
+    <%= f.label :std_error %>
+    <%= f.text_field :std_error %>
+  </div>
+
+  <div class="field">
+    <%= f.label :src_cd %>
+    <%= f.text_field :src_cd %>
+  </div>
+
+  <div class="field">
+    <%= f.label :deriv_cd %>
+    <%= f.text_field :deriv_cd %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ref_ndb_no %>
+    <%= f.text_field :ref_ndb_no %>
+  </div>
+
+  <div class="field">
+    <%= f.label :add_nutr_mark %>
+    <%= f.text_field :add_nutr_mark %>
+  </div>
+
+  <div class="field">
+    <%= f.label :num_studies %>
+    <%= f.number_field :num_studies %>
+  </div>
+
+  <div class="field">
+    <%= f.label :min %>
+    <%= f.text_field :min %>
+  </div>
+
+  <div class="field">
+    <%= f.label :max %>
+    <%= f.text_field :max %>
+  </div>
+
+  <div class="field">
+    <%= f.label :df %>
+    <%= f.number_field :df %>
+  </div>
+
+  <div class="field">
+    <%= f.label :low_eb %>
+    <%= f.text_field :low_eb %>
+  </div>
+
+  <div class="field">
+    <%= f.label :stat_cmt %>
+    <%= f.number_field :stat_cmt %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
